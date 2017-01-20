@@ -21,7 +21,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void insertsLess() {
         BST<Integer> sut = new BST();
         final int expectedRoot = 4;
@@ -42,7 +41,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void insertsSame() {
         BST<Integer> sut = new BST();
         final int expectedRoot = 4;
@@ -63,7 +61,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void insertsRight() {
         BST<Integer> sut = new BST();
         final int expectedRoot = 4;
@@ -84,7 +81,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void createsComplexTree() {
         BST<Integer> sut = new BST<>();
         List<Integer> expected = Collections.unmodifiableList(
@@ -101,7 +97,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void sortsSingleElement() {
         BST<Integer> sut = new BST<>();
         List<Integer> expected = Collections.unmodifiableList(
