@@ -52,21 +52,20 @@ public class BST<T extends Comparable<T>> {
     public List<T> getAsSortedList() {
         // AKA, do an in-order traversal of the BST which
         //  will result in a sorted list of elements
-        List<T> sortedList = this.inOrderTraversal(new ArrayList<T>(), this.getRoot());
-
+        List<T> sortedList = new ArrayList<T>();
+        this.inOrderTraversal(sortedList, this.getRoot());
 
         return sortedList;
     }
 
-    private List<T> inOrderTraversal(List<T> sortedList, List<Node<T>> openList, Node<T> node) {
-        // if this node is on open list, recursively call on parent
-        // if there's no left child, add this to the sortedList and openList
-        //      if there's a right child, recursively call on right child
-        //      otherwise recursively call on parent
-        // if there's a left child but it's on open list, add current to sortedList and openList
-        //      recursively call 
-        
-        if (node.getLeft() != null && !openList.contains(node.getLeft())) sortedList = inOrderTraversal(sortedList, node.getLeft());
+    private void inOrderTraversal(List<T> sortedList, Node<T> node) {
+        if (node.getLeft() != null)
+            inOrderTraversal(sortedList, node.getLeft());
+
+        sortedList.add(node.getData());
+
+        if (node.getRight() != null)
+            inOrderTraversal(sortedList, node.getRight());
     }
 
     public static class Node<T extends Comparable<T>> {

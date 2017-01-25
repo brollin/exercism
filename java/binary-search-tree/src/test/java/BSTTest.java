@@ -110,7 +110,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void sortsCollectionOfTwoIfSecondInsertedIsSmallerThanFirst() {
         BST<Integer> sut = new BST<>();
         List<Integer> expected = Collections.unmodifiableList(
@@ -125,7 +124,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void sortsCollectionOfTwoIfSecondInsertedIsBiggerThanFirst() {
         BST<Integer> sut = new BST<>();
         List<Integer> expected = Collections.unmodifiableList(
@@ -140,7 +138,6 @@ public class BSTTest {
     }
 
     @Test
-    @Ignore
     public void iteratesOverComplexTree() {
         BST<Integer> sut = new BST<>();
         List<Integer> expected = Collections.unmodifiableList(
