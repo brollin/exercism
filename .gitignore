@@ -2,3 +2,4 @@
 *.swo
 .gradle
 build
+.keep
